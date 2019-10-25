@@ -20,39 +20,8 @@ app.use(bodyParser.urlencoded({
 app.get('/', (req, res) => {
     res.send('hello world');
 });
-// app.post('/login',  async (req, res) => {
-//     const body = req.body;
-//     console.log('req.body', body);
-//     const email = body.email;
-//     // lets check if email exists
-//     const result = await Student.findOne({"email":  email});
-//
-//     if(!result) // this means result is null
-//     {
-//         res.status(401).send({
-//             Error: 'This user doesnot exists. Please signup first'
-//         });
-//     }
-//     else{
-//         // email did exist
-//         // so lets match password
-//         if(body.password === result.password){
-//             // great, allow this user access
-//             console.log('match');
-//             res.send({message: 'Successfully Logged in'});
-//         }
-//         else{
-//             console.log('password doesnot match');
-//             res.status(401).send({message: 'Wrong email or Password'});
-//         }
-//     }
-//     console.log('result', result);
-//     // 2. if exists, check if password matches
-//     res.send({ result: result });
-//
-// });
 
-app.post('/login',  async (req, res) => {
+app.post('/login', async (req, res) => {
     const body = req.body;
     console.log('req.body', body);
 
@@ -60,27 +29,24 @@ app.post('/login',  async (req, res) => {
 
     // lets check if email exists
 
-    const result = await Student.findOne({"email":  email});
-    if(!result) // this means result is null
+    const result = await Student.findOne({"email": email});
+    if (!result) // this means result is null
     {
         res.status(401).send({
             Error: 'This user doesnot exists. Please signup first'
         });
-    }
-    else{
+    } else {
         // email did exist
         // so lets match password
 
-        if(body.password === result.password){
+        if (body.password === result.password) {
 
             // great, allow this user access
 
             console.log('match');
 
             res.send({message: 'Successfully Logged in'});
-        }
-
-        else{
+        } else {
 
             console.log('password doesnot match');
 
@@ -93,23 +59,60 @@ app.post('/login',  async (req, res) => {
 });
 app.post('/signup', async (req, res) => {
     const body = req.body;
-    console.log('req.body', body)
-    try{
+    //console.log('req.body', body)
+    try {
         const student = new Student(body);
         const result = await student.save();
         res.send({
             message: 'Student signup successful'
         });
-    }
-    catch(ex){
-        console.log('ex',ex);
+    } catch (ex) {
+        console.log('ex', ex);
         res.send({message: 'Error'}).status(401);
     }
 });
-app.get('/getStudents', async (req, res)=>{
+app.post('/saveStudent', async (req, res) => {
+    const student = new Student(req.body);
+    console.log('student', student);
+    const result = await student.save();
+    if (result) {
+        res.send({
+            message: "Student inserted successfully."
+        });
+    }
+});
+app.post('/updateStudent', async (req, res) => {
+    try {
+        const student = new Student(req.body);
+        console.log('student', student);
+        const result = await student.updateOne();
+        if (result) {
+            res.send({
+                massage: "Student Update Successfully"
+            });
+        }
+    } catch (ex) {
+        console.log('ex', ex);
+        res.send({message: 'Error'}).status(401);
+    }
+});
+app.post('/deleteStudent', async (req, res) => {
+    try {
+        const student = new Student(req.body);
+        const result = await student.delete();
+        if (result) {
+            res.send({
+                massage: 'Student deleted Successfully.'
+            });
+        }
+    } catch (ex) {
+        console.log('ex', ex);
+        res.send({message: 'Error'}).status(401);
+    }
+});
+app.get('/getStudents', async (req, res) => {
     const allStudents = await Student.find();
     console.log('allStudents', allStudents);
-
     res.send(allStudents);
 })
 
