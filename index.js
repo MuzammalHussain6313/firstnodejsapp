@@ -1,5 +1,9 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/studentDB', {useNewUrlParser: true});
+//mongoose.connect('mongodb://localhost:27017/studentDB', {useNewUrlParser: true}, ()=>console.log('connected'));
+
+mongoose.connect('mongodb+srv://root:LdGVH9okz78km0Hx@cluster0-4hc2l.mongodb.net/studentDB?retryWrites=true&w=majority',
+    {useNewUrlParser: true},
+    ()=>console.log('connected'));
 
 const Student = mongoose.model('Student', {
     name: String,
@@ -17,6 +21,12 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+const postsRoute = require('./router/posts');
+
+const studentRoute = require('./router/students');
+
+app.use('/students', studentRoute);
+app.use('/parent-url-posts', postsRoute);
 app.get('/', (req, res) => {
     res.send('hello world');
 });
