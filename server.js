@@ -126,6 +126,6 @@ app.get('/getStudents', async (req, res) => {
     res.send(allStudents);
 })
 
-app.listen(3000, () => {
-    console.log('Express application running on localhost:3000');
+app.listen(36313, () => {
+    console.log('Express application running on ' + server.port);
 });
