@@ -126,6 +126,6 @@ app.get('/getStudents', async (req, res) => {
     res.send(allStudents);
 })
 
-app.listen(36313, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log('Express application running on ');
 });
