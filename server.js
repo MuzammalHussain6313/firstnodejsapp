@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 //mongoose.connect('mongodb://localhost:27017/studentDB', {useNewUrlParser: true}, ()=>console.log('connected'));
 
-mongoose.connect('mongodb+srv://root:LdGVH9okz78km0Hx@cluster0-4hc2l.mongodb.net/studentDB?retryWrites=true&w=majority',
-    {useNewUrlParser: true},
+mongoose.connect('mongodb+srv://muzammal6313:ashrafi9885@cluster0-4hc2l.mongodb.net/studentDB?retryWrites=true&w=majority',
+                 {useNewUrlParser: true},
     ()=>console.log('connected'));
 
 const Student = mongoose.model('Student', {
@@ -12,7 +12,7 @@ const Student = mongoose.model('Student', {
     password: String,
     date_added: Date
 });
-const cors = require('cors');
+  const cors = require('cors');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -123,10 +123,19 @@ app.post('/deleteStudent', async (req, res) => {
 });
 app.get('/getStudents', async (req, res) => {
     const allStudents = await Student.find();
+
     console.log('allStudents', allStudents);
     res.send(allStudents);
 })
 
 app.listen(3000, () => {
     console.log('Express application running on localhost:3000');
+=======
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.send(allStudents);
+})
+
+app.listen(process.env.PORT || 5000, () => {
+    console.log('Express application running on ');
+
 });

@@ -10,13 +10,13 @@ router.get('/', async (req, res)=>{
 router.get('/getStudents', async (req, res)=>{
     // url to access thi sis "localhosta:3000/students/getStudents" not "localhost:3000/getStudents";
     const allStudents = await Student.find();
-    console.log('allStudents', allStudents);
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.send(allStudents);
-    res.send("return list of students here.");
 });
 
 router.post('/newStudent', async (req, res)=>{
     // url to access thi sis "localhosta:3000/students/newStudent" not "localhost:3000/newStudent";
+    req.setHeader('Access-Control-Allow-Origin', '*');
     const student1 = new Student(req.body);
     console.log('student', student1);
     const result = await student1.save();

@@ -2,9 +2,9 @@
   "name": "package",
   "version": "1.0.0",
   "description": "first rest api in node js",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "test"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
