@@ -16,8 +16,8 @@ router.get('/getStudents', async (req, res)=>{
 
 router.post('/newStudent', async (req, res)=>{
     // url to access thi sis "localhosta:3000/students/newStudent" not "localhost:3000/newStudent";
-    req.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Origin', '*');
+    //req.setHeader('Access-Control-Allow-Origin', '*');
+    //res.setHeader('Access-Control-Allow-Origin', '*');
     const student1 = new Student(req.body);
     console.log('student', student1);
     const result = await student1.save();
