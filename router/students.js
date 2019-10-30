@@ -10,7 +10,7 @@ router.get('/', async (req, res)=>{
 router.get('/getStudents', async (req, res)=>{
     // url to access thi sis "localhosta:3000/students/getStudents" not "localhost:3000/getStudents";
     const allStudents = await Student.find();
-    console.log('allStudents', allStudents);
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.send(allStudents);
     res.send("return list of students here.");
 });
