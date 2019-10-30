@@ -12,7 +12,6 @@ router.get('/getStudents', async (req, res)=>{
     const allStudents = await Student.find();
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.send(allStudents);
-    res.send("return list of students here.");
 });
 
 router.post('/newStudent', async (req, res)=>{
