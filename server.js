@@ -122,7 +122,7 @@ app.post('/deleteStudent', async (req, res) => {
 });
 app.get('/getStudents', async (req, res) => {
     const allStudents = await Student.find();
-    console.log('allStudents', allStudents);
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.send(allStudents);
 })
 
