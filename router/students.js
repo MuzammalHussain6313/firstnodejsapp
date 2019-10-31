@@ -29,13 +29,13 @@ router.post('/newStudent', async (req, res)=>{
     res.send("Save a new student will here.");
 });
 
-router.get('/:studentId', async (req, res)=>{
+router.get('/studentId', async (req, res)=>{
     console.log(req.params.studentId);
     const student = await Student.findById(req.params.studentId);
     res.json(student);
 });
 
-router.patch('/:studentId', async (req, res)=>{
+router.patch('/studentId', async (req, res)=>{
     console.log(req.params.studentId);
     const student = await Student.updateOne(
         { _id: req.params.studentId},
@@ -43,5 +43,19 @@ router.patch('/:studentId', async (req, res)=>{
     res.json(student);
 });
 
+router.post('/deleteStudent', async (req, res) => {
+    try {
+        const student = new Student(req.body);
+        const result = await student.delete();
+        if (result) {
+            res.send({
+                massage: 'Student deleted Successfully.'
+            });
+        }
+    } catch (ex) {
+        console.log('ex', ex);
+        res.send({message: 'Error'}).status(401);
+    }
+});
 
 module.exports = router;
