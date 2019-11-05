@@ -35,18 +35,21 @@ router.get('/studentId', async (req, res)=>{
     res.json(student);
 });
 
-router.patch('/studentId', async (req, res)=>{
-    console.log(req.params.studentId);
-    const student = await Student.updateOne(
+
+router.patch('/:studentId', async (req, res)=>{
+    console.log('id body', req.body);
+    console.log('id recieve', req.params.studentId);
+    var student = req.body;
+    const updatedStudent = await Student.updateOne(
         { _id: req.params.studentId},
-        { $set : {name: req.body.name}});
-    res.json(student);
+        { $set: student });
+    res.send(updatedStudent);
 });
 
-router.post('/deleteStudent', async (req, res) => {
+router.delete('/:deleteStudent', async (req, res) => {
     try {
-        const student = new Student(req.body);
-        const result = await student.delete();
+        console.log('body ' + req.body);
+        const result = await Student.remove({ _id: req.params.deleteStudent});
         if (result) {
             res.send({
                 massage: 'Student deleted Successfully.'
@@ -57,5 +60,6 @@ router.post('/deleteStudent', async (req, res) => {
         res.send({message: 'Error'}).status(401);
     }
 });
+
 
 module.exports = router;
