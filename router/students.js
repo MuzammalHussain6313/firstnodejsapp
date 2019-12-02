@@ -16,7 +16,8 @@ router.get('/getStudents', async (req, res)=>{
 
 router.post('/newStudent', async (req, res)=>{
     // url to access thi sis "localhosta:3000/students/newStudent" not "localhost:3000/newStudent";
-    req.setHeader('Access-Control-Allow-Origin', '*');
+    //req.setHeader('Access-Control-Allow-Origin', '*');
+    //res.setHeader('Access-Control-Allow-Origin', '*');
     const student1 = new Student(req.body);
     console.log('student', student1);
     const result = await student1.save();
@@ -28,18 +29,36 @@ router.post('/newStudent', async (req, res)=>{
     res.send("Save a new student will here.");
 });
 
-router.get('/:studentId', async (req, res)=>{
+router.get('/studentId', async (req, res)=>{
     console.log(req.params.studentId);
     const student = await Student.findById(req.params.studentId);
     res.json(student);
 });
 
+
 router.patch('/:studentId', async (req, res)=>{
-    console.log(req.params.studentId);
-    const student = await Student.updateOne(
+    console.log('id body', req.body);
+    console.log('id recieve', req.params.studentId);
+    var student = req.body;
+    const updatedStudent = await Student.updateOne(
         { _id: req.params.studentId},
-        { $set : {name: req.body.name}});
-    res.json(student);
+        { $set: student });
+    res.send(updatedStudent);
+});
+
+router.delete('/:deleteStudent', async (req, res) => {
+    try {
+        console.log('body ' + req.body);
+        const result = await Student.remove({ _id: req.params.deleteStudent});
+        if (result) {
+            res.send({
+                massage: 'Student deleted Successfully.'
+            });
+        }
+    } catch (ex) {
+        console.log('ex', ex);
+        res.send({message: 'Error'}).status(401);
+    }
 });
 
 module.exports = router;
