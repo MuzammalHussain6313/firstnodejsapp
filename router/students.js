@@ -10,7 +10,7 @@ router.get('/', async (req, res)=>{
 router.get('/getStudents', async (req, res)=>{
     // url to access thi sis "localhosta:3000/students/getStudents" not "localhost:3000/getStudents";
     const allStudents = await Student.find();
-    res.setHeader('Access-Control-Allow-Origin', '*');
+    //res.setHeader('Access-Control-Allow-Origin', '*');
     res.send(allStudents);
 });
 
@@ -41,6 +41,5 @@ router.patch('/:studentId', async (req, res)=>{
         { $set : {name: req.body.name}});
     res.json(student);
 });
-
 
 module.exports = router;
