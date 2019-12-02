@@ -12,7 +12,8 @@ const Student = mongoose.model('Student', {
     password: String,
     date_added: Date
 });
-  const cors = require('cors');
+
+const cors = require('cors');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -23,11 +24,12 @@ app.use(bodyParser.urlencoded({
 }));
 
 const postsRoute = require('./router/posts');
-
 const studentRoute = require('./router/students');
+const userRoute = require('./router/users');
 
 app.use('/students', studentRoute);
 app.use('/parent-url-posts', postsRoute);
+app.use('/users', userRoute);
 app.get('/', (req, res) => {
     res.send('hello world');
 });
@@ -130,9 +132,8 @@ app.get('/getStudents', async (req, res) => {
 
 app.listen(3000, () => {
     console.log('Express application running on localhost:3000');
-=======
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.send(allStudents);
+    //res.setHeader('Access-Control-Allow-Origin', '*');
+    //res.send(allStudents);
 })
 
 app.listen(process.env.PORT || 5000, () => {
