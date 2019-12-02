@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1454b9f1-04c0-4d8b-90bc-c96313120770" name="Default Changelist" comment="" />
+    <list default="true" id="1454b9f1-04c0-4d8b-90bc-c96313120770" name="Default Changelist" comment="User file created for User model.">
+      <change afterPath="$PROJECT_DIR$/node_modules/bcryptjs/externs/bcrypt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/bcryptjs/externs/minimal-env.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/bcryptjs/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/bcryptjs/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/bcryptjs/scripts/build.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/bcryptjs/src/bcrypt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/bcryptjs/src/bcrypt/impl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/bcryptjs/src/bcrypt/prng/accum.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/bcryptjs/src/bcrypt/prng/isaac.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/bcryptjs/src/bcrypt/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/bcryptjs/src/bcrypt/util/base64.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/bcryptjs/src/wrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jsonwebtoken/decode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jsonwebtoken/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jsonwebtoken/lib/JsonWebTokenError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jsonwebtoken/lib/NotBeforeError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jsonwebtoken/lib/TokenExpiredError.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jsonwebtoken/lib/psSupported.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jsonwebtoken/lib/timespan.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jsonwebtoken/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jsonwebtoken/sign.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/jsonwebtoken/verify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/router/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/students.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/students.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +49,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UQJpMX29lbcxi9ZKxXbEyTNI0H" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunDashboard">
@@ -45,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575283067748</updated>
-      <workItem from="1575283073440" duration="204000" />
+      <workItem from="1575283073440" duration="7336000" />
     </task>
     <task id="LOCAL-00001" summary="User file created for User model.">
       <created>1575283204091</created>
@@ -72,6 +105,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="User file created for User model." />
     <option name="LAST_COMMIT_MESSAGE" value="User file created for User model." />
   </component>
