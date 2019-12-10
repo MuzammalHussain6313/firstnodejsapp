@@ -8,7 +8,8 @@ router.get('/', async (req, res)=>{
 });
 
 router.get('/getStudents', async (req, res)=>{
-    // url to access thi sis "localhosta:3000/students/getStudents" not "localhost:3000/getStudents";
+    // url to access this is "localhosta:3000/students/getStudents" not "localhost:3000/getStudents";
+    console.log('test');
     const allStudents = await Student.find();
     //res.setHeader('Access-Control-Allow-Origin', '*');
     res.send(allStudents);
@@ -40,6 +41,21 @@ router.patch('/:studentId', async (req, res)=>{
         { _id: req.params.studentId},
         { $set : {name: req.body.name}});
     res.json(student);
+});
+
+router.delete('/:deleteStudent', async (req, res) => {
+    try {
+        console.log('body ' + req.body);
+        const result = await Student.remove({ _id: req.params.deleteStudent});
+        if (result) {
+            res.send({
+                massage: 'Student deleted Successfully.'
+            });
+        }
+    } catch (ex) {
+        console.log('ex', ex);
+        res.send({message: 'Error'}).status(401);
+    }
 });
 
 module.exports = router;
