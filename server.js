@@ -6,11 +6,6 @@ mongoose.connect('mongodb+srv://muzammal6313:ashrafi9885@cluster0-4hc2l.mongodb.
     console.log(err);});
 
 const Student = require('../firstnodejsapp/models/Student');
-const Student = mongoose.model('Student', {
-    name: String,
-    student_id: Number,
-    email: String
-});
 
 const cors = require('cors');
 const express = require('express');
