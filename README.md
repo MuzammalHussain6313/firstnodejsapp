@@ -42,19 +42,11 @@ Connected with online cluster of mongodb.
 
 <br><p>Login the page</p><br>
 <img src="assets/login.png" width="700" height="300"><br>
-<br>
-
 <br><p>Get List of Students</p><br>
 <img src="assets/getstudents.PNG" width="700" height="300"><br>
-<br>
-
 <br><p>Add New Student</p><br>
 <img src="assets/newstudent.PNG" width="700" height="300"><br>
-<br>
-
 <br><p>Online Database Cluster</p><br>
 <img src="assets/mongoDB.PNG" width="700" height="300"><br>
-<br>
-
 <p>Server to deploye the API.</p><br>
 <img src="assets/heroku.PNG" width="700" height="300"><br>
