@@ -17,6 +17,7 @@ Connected with online cluster of mongodb.
 <ol>
   Home Page of API
   <li><a href = "https://test-node-api-test.herokuapp.com/">https://test-node-api-test.herokuapp.com</a></li>
+  <h4> API endpoints for Student.</h4>
   Get method to get All Students.
   <li><a href = "https://test-node-api-test.herokuapp.com/students/getStudents">https://test-node-api-test.herokuapp.com/students/getStudents</a></li>
   Get method to get student by id.
