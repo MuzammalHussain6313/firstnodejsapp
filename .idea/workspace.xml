@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1454b9f1-04c0-4d8b-90bc-c96313120770" name="Default Changelist" comment="User file created for User model.">
+      <change afterPath="$PROJECT_DIR$/assets/login.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Property.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Property.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/properties.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/properties.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/cluster.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/getUsers.PNG" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +67,7 @@
       <workItem from="1577184048999" duration="938000" />
       <workItem from="1577372758901" duration="1870000" />
       <workItem from="1577437848439" duration="3618000" />
+      <workItem from="1577955206759" duration="2116000" />
     </task>
     <task id="LOCAL-00001" summary="User file created for User model.">
       <created>1575283204091</created>
