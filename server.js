@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-//mongoose.connect('mongodb://localhost:27017/studentDB', {useNewUrlParser: true}, ()=>console.log('connected'));
+mongoose.connect('mongodb://localhost:27017/studentDB', {useNewUrlParser: true}, ()=>console.log('connected'));
 
-mongoose.connect('mongodb+srv://muzammal6313:ashrafi9885@cluster0-4hc2l.mongodb.net/studentDB?retryWrites=true&w=majority',
-    {useNewUrlParser: true}).then(() => console.log('connected')).catch(err =>{
-    console.log(err);});
+// mongoose.connect('mongodb+srv://muzammal6313:ashrafi9885@cluster0-4hc2l.mongodb.net/studentDB?retryWrites=true&w=majority',
+//     {useNewUrlParser: true}).then(() => console.log('connected')).catch(err =>{
+//     console.log(err);});
 
 const Student = require('../firstnodejsapp/models/Student');
 
@@ -20,11 +20,14 @@ app.use(bodyParser.urlencoded({
 const postsRoute = require('./router/posts');
 const studentRoute = require('./router/students');
 const userRoute = require('./router/users');
+const propertyRoute = require('./router/properties');
 
 //app.use('/router')(router);
 app.use('/students', studentRoute);
 app.use('/parent-url-posts', postsRoute);
 app.use('/users', userRoute);
+app.use('/properties', propertyRoute);
+
 app.get('/', (req, res) => {
     res.send('hello world');
 });
