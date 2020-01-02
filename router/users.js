@@ -7,7 +7,7 @@ const User = require('../models/User');
 
 router.get('/', async (req,res)=>{
     res.send("That is default page of the Users endpoint.")
-})
+});
 router.post('/signup', async (req, res) => {
 
     try{
@@ -16,11 +16,6 @@ router.post('/signup', async (req, res) => {
         const password = await body.password;
         var hash = bcrypt.hashSync(password, salt);
 
-        // bcrypt.genSalt(10, function(err, salt) {
-        //     bcrypt.hash(req.body.password, salt, function(err, hash) {
-        //         // Store hash in your password DB.
-        //     });
-        // });
         console.log('hash - > ', hash);
         //console.log('body ===== ', req.body);
         body.password = hash;
@@ -78,7 +73,6 @@ router.post('/login', async (req, res) => {
         console.log('ex', ex);
     }
 });
-
 
 router.get('/getUsers', async (req, res)=>{
     const allUsers = await User.find();
