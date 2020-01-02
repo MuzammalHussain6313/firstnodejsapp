@@ -4,6 +4,8 @@
   "description": "first rest api in node js",
   "main": "server.js",
   "scripts": {
+    "server-prod": "node server.js",
+    "server": "nodemon server.js",
     "start": "node server.js"
   },
   "repository": {
