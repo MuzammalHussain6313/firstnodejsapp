@@ -17,6 +17,7 @@ Connected with online cluster of mongodb.
 <ol>
   Home Page of API
   <li><a href = "https://test-node-api-test.herokuapp.com/">https://test-node-api-test.herokuapp.com</a></li>
+  <h4> API endpoints for Student.</h4>
   Get method to get All Students.
   <li><a href = "https://test-node-api-test.herokuapp.com/students/getStudents">https://test-node-api-test.herokuapp.com/students/getStudents</a></li>
   Get method to get student by id.
@@ -42,19 +43,11 @@ Connected with online cluster of mongodb.
 
 <br><p>Login the page</p><br>
 <img src="assets/login.png" width="700" height="300"><br>
-<br>
-
 <br><p>Get List of Students</p><br>
 <img src="assets/getstudents.PNG" width="700" height="300"><br>
-<br>
-
 <br><p>Add New Student</p><br>
 <img src="assets/newstudent.PNG" width="700" height="300"><br>
-<br>
-
 <br><p>Online Database Cluster</p><br>
 <img src="assets/mongoDB.PNG" width="700" height="300"><br>
-<br>
-
 <p>Server to deploye the API.</p><br>
 <img src="assets/heroku.PNG" width="700" height="300"><br>
