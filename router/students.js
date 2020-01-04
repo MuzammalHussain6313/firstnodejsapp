@@ -30,7 +30,7 @@ router.post('/newStudent', async (req, res)=>{
     res.send("Save a new student will here.");
 });
 
-router.get('/studentId', async (req, res)=>{
+router.get('/:studentId', async (req, res)=>{
     console.log(req.params.studentId);
     const student = await Student.findById(req.params.studentId);
     res.json(student);
