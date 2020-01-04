@@ -36,9 +36,9 @@ Connected with online cluster of mongodb.
   Dlete method to Delete existing usetr by providing the id of property.
   <li><a href = "https://test-node-api-test.herokuapp.com/properties/{id}">https://test-node-api-test.herokuapp.com/properties/{id}</a></li>
   Get method to get Old posts.
-  <li><a href = "https://test-node-api-test.herokuapp.com/posts/oldposts">https://test-node-api-test.herokuapp.com/oldPosts</a></li>
+  <li><a href = "https://test-node-api-test.herokuapp.com/parent-url-posts/oldposts">https://test-node-api-test.herokuapp.com/parent-url-posts/oldPosts</a></li>
   Get method to get new posts.
-  <li><a href = "https://test-node-api-test.herokuapp.com/posts/newPosts">https://test-node-api-test.herokuapp.com/newPosts</a></li>
+  <li><a href = "https://test-node-api-test.herokuapp.com/parent-url-posts/newPosts">https://test-node-api-test.herokuapp.com/parent-url-posts/newPosts</a></li>
 </ol>  
 
 <br><p>Login the page</p><br>
